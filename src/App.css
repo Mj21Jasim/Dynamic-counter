@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  transition:
+    background-color 1s ease,
+    background-image 1s ease;
+}
+
+
+.counter-card {
+  width: 100%;
+  max-width: 520px;
+
+  padding: 55px 40px;
+
+  text-align: center;
+
+  color: white;
+
+  background: rgba(255, 255, 255, 0.13);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 30px;
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.3),
+    0 0 80px rgba(255, 255, 255, 0.08);
+}
+
+.subtitle {
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  opacity: 0.7;
+
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 42px;
+
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: 15px;
+
+  opacity: 0.8;
+
+  margin-bottom: 40px;
+}
+
+.count {
+  font-size: 110px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 45px;
+
+  text-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25);
+
+  animation: countPop 0.35s ease;
+}
+
+@keyframes countPop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+
+  60% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.buttons {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+button {
+  border: none;
+
+  cursor: pointer;
+
+  font-size: 20px;
+
+  font-weight: bold;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-4px);
+}
+
+button:active {
+  transform: scale(0.94);
+}
+
+.counter-btn {
+  width: 60px;
+  height: 60px;
+
+  border-radius: 17px;
+
+  color: white;
+
+  background: rgba(255, 255, 255, 0.2);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  font-size: 30px;
+}
+
+.counter-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.reset-btn {
+  padding: 19px 28px;
+
+  border-radius: 17px;
+
+  background: white;
+
+  color: #222;
+
+  font-size: 15px;
+}
+
+.reset-btn:hover {
+  background: #eeeeee;
+}
+
+.color-info {
+  margin-top: 35px;
+
+  font-size: 13px;
+
+  opacity: 0.65;
+}
+
+@media (max-width: 500px) {
+
+  .counter-card {
+    padding: 45px 20px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .count {
+    font-size: 85px;
+  }
+
+  .buttons {
+    gap: 10px;
+  }
+
+  .counter-btn {
+    width: 55px;
+    height: 55px;
+  }
+}
